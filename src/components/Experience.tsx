@@ -88,18 +88,18 @@ export default function Experience() {
       </div>
 
       {/* Vertical Animated Timeline */}
-      <div className="relative border-l-2 border-white/10 ml-4 sm:ml-32 pl-6 sm:pl-10 space-y-12">
+      <div className="relative border-l-2 border-white/10 ml-2 sm:ml-32 pl-4 sm:pl-10 space-y-12">
         {EXPERIENCES.map((exp, idx) => (
           <motion.div
             key={exp.role + exp.company}
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: idx * 0.2 }}
             className="relative group"
           >
             {/* Timeline Dot Indicator */}
-            <div className="absolute -left-[31px] sm:-left-[47px] top-1.5 w-5 h-5 rounded-full bg-black border-2 border-[#D4AF37] group-hover:scale-125 group-hover:bg-[#D4AF37] transition-all duration-300 shadow-lg shadow-[#D4AF37]/50 flex items-center justify-center">
+            <div className="absolute -left-[23px] sm:-left-[47px] top-1.5 w-5 h-5 rounded-full bg-black border-2 border-[#D4AF37] group-hover:scale-125 group-hover:bg-[#D4AF37] transition-all duration-300 shadow-lg shadow-[#D4AF37]/50 flex items-center justify-center">
               <div className="w-1.5 h-1.5 rounded-full bg-white" />
             </div>
 

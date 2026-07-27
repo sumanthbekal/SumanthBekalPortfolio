@@ -21,9 +21,9 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-12 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto relative">
+    <section id="contact" className="py-12 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto relative overflow-hidden sm:overflow-visible">
       {/* Background Champagne Gold Ambient Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-[#D4AF37]/15 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 sm:w-96 h-72 sm:h-96 bg-[#D4AF37]/15 rounded-full blur-[90px] sm:blur-[120px] pointer-events-none" />
 
       {/* Section Header */}
       <div className="text-center max-w-3xl mx-auto mb-16 relative z-10">
@@ -63,8 +63,8 @@ export default function Contact() {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start relative z-10">
         {/* Contact Information & Socials */}
         <motion.div
-          initial={{ opacity: 0, x: -30 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
           className="lg:col-span-5 p-8 rounded-3xl glass-card flex flex-col justify-between h-full"
@@ -152,8 +152,8 @@ export default function Contact() {
 
         {/* Contact Form */}
         <motion.div
-          initial={{ opacity: 0, x: 30 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
           className="lg:col-span-7 p-8 rounded-3xl glass-card relative"

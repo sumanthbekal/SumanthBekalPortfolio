@@ -323,15 +323,17 @@ export default function Projects() {
                 </div>
 
                 {/* Actions */}
-                <div className="flex items-center justify-end pt-4 border-t border-white/10">
-                  <button
-                    onClick={() => setSelectedProject(project)}
-                    className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 hover:border-[#D4AF37]/50 text-xs font-mono text-[#F7E7A1] hover:text-white transition-all"
-                  >
-                    <Play className="w-3.5 h-3.5 text-[#D4AF37] fill-[#D4AF37]" />
-                    <span>Watch Full Demo</span>
-                  </button>
-                </div>
+                {project.video && (
+                  <div className="flex items-center justify-end pt-4 border-t border-white/10">
+                    <button
+                      onClick={() => setSelectedProject(project)}
+                      className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 hover:border-[#D4AF37]/50 text-xs font-mono text-[#F7E7A1] hover:text-white transition-all"
+                    >
+                      <Play className="w-3.5 h-3.5 text-[#D4AF37] fill-[#D4AF37]" />
+                      <span>Watch Full Demo</span>
+                    </button>
+                  </div>
+                )}
               </div>
             </motion.div>
           );
@@ -446,15 +448,17 @@ export default function Projects() {
               </div>
 
               {/* Action Button */}
-              <div className="pt-4 border-t border-white/10 flex items-center justify-end mt-3">
-                <button
-                  onClick={() => setSelectedProject(PROJECTS[currentIndex])}
-                  className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-white/5 border border-white/10 text-xs font-mono text-[#F7E7A1] active:scale-95 transition-transform"
-                >
-                  <Play className="w-3.5 h-3.5 text-[#D4AF37] fill-[#D4AF37]" />
-                  <span>Watch Full Demo</span>
-                </button>
-              </div>
+              {PROJECTS[currentIndex].video && (
+                <div className="pt-4 border-t border-white/10 flex items-center justify-end mt-3">
+                  <button
+                    onClick={() => setSelectedProject(PROJECTS[currentIndex])}
+                    className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-white/5 border border-white/10 text-xs font-mono text-[#F7E7A1] active:scale-95 transition-transform"
+                  >
+                    <Play className="w-3.5 h-3.5 text-[#D4AF37] fill-[#D4AF37]" />
+                    <span>Watch Full Demo</span>
+                  </button>
+                </div>
+              )}
             </motion.div>
           </AnimatePresence>
         </div>
