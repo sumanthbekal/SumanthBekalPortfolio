@@ -1,107 +1,307 @@
-@import "tailwindcss";
-@import "tw-animate-css";
-@import "shadcn/tailwind.css";
-
-@custom-variant dark (&:is(.dark *));
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
-  --bg-pure: #050505;
-  --accent-gold-primary: #D4AF37;
-  --accent-gold-secondary: #F7E7A1;
-  --accent-gold-hover: #FFE8A3;
-  --text-primary: #FFFFFF;
-  --text-secondary: #B8B8B8;
-  --border-glass: rgba(255, 255, 255, 0.08);
-  --card-glass: rgba(255, 255, 255, 0.04);
-  --card-glass-hover: rgba(255, 255, 255, 0.07);
+  --bg-light: #F5F3EE;
+  --text-primary: #111111;
+  --text-secondary: #666666;
+  --accent-lime: #C7F000;
+  --border-light: #C9C7C0;
+  --dark-section: #111111;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 html {
+  background-color: #F5F3EE;
   scroll-behavior: smooth;
-  background-color: var(--bg-pure);
-  color: var(--text-primary);
-  font-family: var(--font-sans, system-ui, -apple-system, sans-serif);
 }
 
 body {
   margin: 0;
   padding: 0;
+  background-color: #F5F3EE;
+  color: #111111;
+  font-family: var(--font-inter), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   overflow-x: hidden;
-  background-color: var(--bg-pure);
-  color: var(--text-primary);
 }
 
-/* Luxury Glassmorphism Utilities */
-.glass-card {
-  background: var(--card-glass);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
-  border: 1px solid var(--border-glass);
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+::selection {
+  background-color: #C7F000;
+  color: #000000;
 }
 
-.glass-card:hover {
-  background: var(--card-glass-hover);
-  border-color: rgba(212, 175, 55, 0.4);
-  box-shadow: 0 0 25px rgba(212, 175, 55, 0.12);
-  transform: translateY(-6px);
-}
-
-.glass-pill {
-  background: rgba(18, 18, 18, 0.75);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
-  border: 1px solid var(--border-glass);
-}
-
-.glass-button {
-  background: rgba(255, 255, 255, 0.04);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  transition: all 0.3s ease-in-out;
-}
-
-.glass-button:hover {
-  background: rgba(212, 175, 55, 0.1);
-  border-color: #D4AF37;
-  color: #F7E7A1;
-  box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
-}
-
-/* Champagne Gold Text Gradients */
-.text-gradient-gold {
-  background: linear-gradient(135deg, #FFFFFF 0%, #F7E7A1 45%, #D4AF37 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.text-gradient-silver {
-  background: linear-gradient(180deg, #FFFFFF 0%, #B8B8B8 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.gold-glow {
-  box-shadow: 0 0 40px rgba(212, 175, 55, 0.2);
-}
-
-.badge-glow {
-  box-shadow: 0 0 14px rgba(212, 175, 55, 0.22);
-}
-
-/* Custom Scrollbar */
+/* Custom scrollbar */
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 8px;
+  height: 8px;
 }
+
 ::-webkit-scrollbar-track {
-  background: #050505;
+  background: #F5F3EE;
 }
+
 ::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.15);
-  border-radius: 9999px;
+  background: #C9C7C0;
+  border-radius: 4px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
-  background: #D4AF37;
+  background: #111111;
+}
+
+/* Hide scrollbar utility */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Editorial brutalism helpers */
+.font-mono-tech {
+  font-family: var(--font-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+.brutalist-border {
+  border-color: #C9C7C0;
+}
+
+.brutalist-dark-border {
+  border-color: #262626;
+}
+
+/* Text stroke for outlined typography */
+.text-stroke-dark {
+  -webkit-text-stroke: 1.5px #111111;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+@media (min-width: 768px) {
+  .text-stroke-dark {
+    -webkit-text-stroke: 2px #111111;
+  }
+}
+
+.text-stroke-thick {
+  -webkit-text-stroke: 2px #111111;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+@media (min-width: 768px) {
+  .text-stroke-thick {
+    -webkit-text-stroke: 2.5px #111111;
+  }
+}
+
+.hero-bekal-outline {
+  font-family: var(--font-oswald), "Oswald", system-ui, sans-serif;
+  font-weight: 700;
+  -webkit-text-stroke: 2px #111111;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+  .hero-bekal-outline {
+    -webkit-text-stroke: 2.5px #111111;
+  }
+}
+
+/* Infinite smooth logo marquee keyframe animation */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  animation: marquee 35s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* =========================================================
+   PREMIUM BUTTON & INTERACTIVE SYSTEM
+   Consistent easing: cubic-bezier(0.22, 1, 0.36, 1)
+   ========================================================= */
+
+/* Primary Button (e.g., Let's Talk, View My Work, Direct Email, Send Message) */
+.btn-premium-primary {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625rem;
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+  outline: none;
+}
+
+.btn-premium-primary:hover {
+  transform: translateY(-2.5px);
+  box-shadow: 0 8px 20px -4px rgba(199, 240, 0, 0.35), 0 4px 8px -2px rgba(0, 0, 0, 0.12);
+}
+
+.btn-premium-primary:active {
+  transform: translateY(0px) scale(0.985);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.btn-premium-primary:focus-visible {
+  outline: 2px solid #C7F000;
+  outline-offset: 2px;
+}
+
+/* Primary Lime Variant (e.g. View My Work, Direct Email) */
+.btn-premium-lime {
+  background-color: #C7F000;
+  color: #111111;
+  border: 1px solid #111111;
+}
+
+.btn-premium-lime:hover {
+  background-color: #111111;
+  color: #C7F000;
+  border-color: #C7F000;
+  box-shadow: 0 8px 24px -4px rgba(199, 240, 0, 0.45);
+}
+
+/* Dark Button Variant (e.g. Header Let's Talk, Explore Github) */
+.btn-premium-dark {
+  background-color: #111111;
+  color: #ffffff;
+  border: 1px solid #333333;
+}
+
+.btn-premium-dark:hover {
+  background-color: #C7F000;
+  color: #111111;
+  border-color: #111111;
+  box-shadow: 0 8px 20px -4px rgba(199, 240, 0, 0.35);
+}
+
+/* Secondary & Outlined Button (e.g., Download Resume, Close Details) */
+.btn-premium-outline {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625rem;
+  background-color: #F5F3EE;
+  color: #111111;
+  border: 1px solid #C9C7C0;
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+  outline: none;
+}
+
+.btn-premium-outline:hover {
+  transform: translateY(-2.5px);
+  background-color: #ffffff;
+  border-color: #111111;
+  box-shadow: 0 6px 16px -3px rgba(0, 0, 0, 0.12);
+}
+
+.btn-premium-outline:active {
+  transform: translateY(0px) scale(0.985);
+}
+
+.btn-premium-outline:focus-visible {
+  outline: 2px solid #111111;
+  outline-offset: 2px;
+}
+
+/* Secondary on Dark (e.g. Contact section View Resume) */
+.btn-premium-outline-dark {
+  background-color: transparent;
+  color: #ffffff;
+  border: 1px solid #333333;
+}
+
+.btn-premium-outline-dark:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-color: #C7F000;
+  color: #C7F000;
+  box-shadow: 0 6px 20px -4px rgba(199, 240, 0, 0.25);
+}
+
+/* Premium Icon Button (e.g., Carousel arrows, Scroll to Top, Social links) */
+.btn-premium-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  outline: none;
+}
+
+.btn-premium-icon:hover {
+  transform: translateY(-2px) scale(1.06);
+}
+
+.btn-premium-icon:active {
+  transform: translateY(0px) scale(0.94);
+}
+
+.btn-premium-icon:focus-visible {
+  outline: 2px solid #C7F000;
+  outline-offset: 2px;
+}
+
+/* Navigation Link Underline Effect */
+.nav-link-premium {
+  position: relative;
+  transition: color 0.25s ease;
+}
+
+.nav-link-premium::after {
+  content: "";
+  position: absolute;
+  bottom: 2px;
+  left: 0.6rem;
+  right: 0.6rem;
+  height: 2px;
+  background-color: #111111;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.nav-link-premium:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* Arrow Glide Micro-interaction */
+.arrow-glide {
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.group:hover .arrow-glide,
+.btn-premium-primary:hover .arrow-glide,
+.btn-premium-outline:hover .arrow-glide,
+.btn-premium-lime:hover .arrow-glide,
+.btn-premium-dark:hover .arrow-glide {
+  transform: translate(3px, -3px);
 }
