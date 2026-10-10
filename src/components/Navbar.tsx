@@ -9,10 +9,11 @@ export default function Navbar() {
   const navLinks = [
     { name: "HOME", href: "#home" },
     { name: "WORK", href: "#work" },
+    { name: "SERVICES", href: "#services" },
+    { name: "CLIENTS", href: "#clients" },
     { name: "EXPERIENCE", href: "#experience" },
     { name: "SKILLS", href: "#skills" },
     { name: "CERTIFICATIONS", href: "#certifications" },
-    { name: "CLIENTS", href: "#clients" },
     { name: "ABOUT", href: "#about" },
     { name: "CONTACT", href: "#contact" },
   ];
@@ -31,7 +32,7 @@ export default function Navbar() {
                 SUMANTH BEKAL
               </span>
               <span className="font-mono-tech text-[8px] sm:text-[9px] md:text-[10px] text-[#666666] tracking-tight uppercase mt-0.5 sm:mt-1 leading-none truncate">
-                AI ENGINEER & DEVELOPER
+                SHOPIFY DEVELOPER · AI ENGINEER
               </span>
             </div>
           </a>

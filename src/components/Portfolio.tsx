@@ -5,6 +5,7 @@ import { ArrowUp } from "lucide-react";
 import Navbar from "./Navbar";
 import Hero from "./Hero";
 import FeaturedProjects from "./FeaturedProjects";
+import Services from "./Services";
 import ClientWebsites from "./ClientWebsites";
 import Experience from "./Experience";
 import AboutAndSkills from "./AboutAndSkills";
@@ -48,16 +49,19 @@ export default function Portfolio() {
         {/* 3. Featured Projects (01 - 05 with Video Players and Modals) */}
         <FeaturedProjects />
 
-        {/* 4. Work & Internship Experience */}
-        <Experience />
+        {/* 4. Dedicated Hire Me / Freelance Services Section */}
+        <Services />
 
         {/* 5. Client Websites Carousel & 18 Logomarks */}
         <ClientWebsites />
 
-        {/* 6. About Me & Skills / Education */}
+        {/* 6. Work & Internship Experience */}
+        <Experience />
+
+        {/* 7. About Me & Skills / Education */}
         <AboutAndSkills />
 
-        {/* 7. Certifications & Verified Credentials */}
+        {/* 8. Certifications & Verified Credentials */}
         <Certifications />
       </main>
 

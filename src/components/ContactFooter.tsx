@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { ArrowUpRight, Github, Linkedin, Instagram, Mail, Lock, Phone, MessageSquare, Send, CheckCircle2, AlertCircle } from "lucide-react";
 
 export default function ContactFooter() {
@@ -15,6 +15,24 @@ export default function ContactFooter() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submittedStatus, setSubmittedStatus] = useState<"idle" | "ready" | "error">("idle");
   const [statusMessage, setStatusMessage] = useState("");
+
+  // Listen for service prefill triggers from the Services section CTAs
+  useEffect(() => {
+    const handlePrefill = (e: Event) => {
+      const customEvent = e as CustomEvent<{ service?: string }>;
+      if (customEvent.detail && customEvent.detail.service) {
+        const selected = customEvent.detail.service;
+        setFormData((prev) => ({
+          ...prev,
+          subject: `Project Inquiry: ${selected}`,
+          message: prev.message || `Hi Sumanth,\n\nI would like to discuss a project regarding ${selected}.\n\nHere are some initial details:`,
+        }));
+      }
+    };
+
+    window.addEventListener("prefill-contact-service", handlePrefill);
+    return () => window.removeEventListener("prefill-contact-service", handlePrefill);
+  }, []);
 
   const validate = () => {
     const errs: Record<string, string> = {};

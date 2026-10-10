@@ -4,7 +4,7 @@ import Image from "next/image";
 import { ArrowUpRight, ArrowDown, Globe } from "lucide-react";
 
 export default function Hero() {
-  const technicalLabels = ["AI", "SHOPIFY", "AUTOMATION", "COMPUTER VISION"];
+  const technicalLabels = ["SHOPIFY DEVELOPMENT", "AI/ML", "IOT", "AUTOMATION"];
   const services = [
     "SHOPIFY DEVELOPMENT",
     "AI SOLUTIONS",
@@ -47,12 +47,12 @@ export default function Hero() {
 
           {/* Introduction Headline */}
           <h2 className="font-heading font-black text-sm sm:text-base md:text-lg xl:text-xl text-[#111111] tracking-tight uppercase leading-snug max-w-lg mb-2.5">
-            I BUILD AI SYSTEMS, AUTOMATE COMMERCE, AND SHIP DIGITAL PRODUCTS.
+            I BUILD SHOPIFY STOREFRONTS, AI SYSTEMS, AND CONNECTED DIGITAL PRODUCTS.
           </h2>
 
           {/* Supporting Bio Description */}
           <p className="text-xs sm:text-[13px] text-[#666666] max-w-md leading-relaxed mb-5 font-normal">
-            A developer and problem solver working at the intersection of AI, computer vision and e-commerce. I build real-world solutions that create impact.
+            I&apos;m a Shopify Developer and AI Engineer who builds high-performing eCommerce storefronts, portfolio websites, intelligent computer vision systems, and IoT solutions. I turn ideas into practical digital products for businesses and individuals.
           </p>
 
           {/* CTA Buttons: neat flex-col on very small screens, flex-row on sm+ */}
