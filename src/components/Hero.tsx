@@ -22,11 +22,11 @@ export default function Hero() {
       <div className="max-w-[1440px] mx-auto w-full grid grid-cols-1 lg:grid-cols-12 flex-1 items-stretch">
         
         {/* Left Column (5 Cols on desktop): Typography, Headline, Bio, and natural CTA buttons */}
-        <div className="lg:col-span-5 flex flex-col justify-center p-6 sm:p-8 lg:p-7 xl:p-9 border-b lg:border-b-0 lg:border-r border-[#C9C7C0]">
+        <div className="lg:col-span-5 flex flex-col justify-center p-5 sm:p-8 lg:p-7 xl:p-9 border-b lg:border-b-0 lg:border-r border-[#C9C7C0]">
           {/* Small Category Meta Label */}
-          <div className="flex flex-wrap items-center gap-2 mb-3 lg:mb-3.5 font-mono-tech text-[10px] sm:text-[11px] text-[#666666] tracking-widest uppercase">
+          <div className="flex flex-wrap items-center gap-x-2 gap-y-1 mb-3 lg:mb-3.5 font-mono-tech text-[10px] sm:text-[11px] text-[#666666] tracking-widest uppercase">
             {technicalLabels.map((label, idx) => (
-              <span key={label} className="flex items-center gap-2">
+              <span key={label} className="inline-flex items-center gap-2">
                 <span>{label}</span>
                 {idx < technicalLabels.length - 1 && (
                   <span className="text-[#111111] font-black">·</span>
@@ -37,10 +37,10 @@ export default function Hero() {
 
           {/* Solid SUMANTH + Outlined BEKAL */}
           <div className="mb-3.5 lg:mb-4 select-none">
-            <h1 className="text-[clamp(3.2rem,5.6vw,6.4rem)] font-black tracking-tighter uppercase text-[#111111] leading-[0.88] block">
+            <h1 className="text-[clamp(2.75rem,5.6vw,6.4rem)] font-black tracking-tighter uppercase text-[#111111] leading-[0.9] block break-words">
               SUMANTH
             </h1>
-            <h1 className="hero-bekal-outline text-[clamp(3.7rem,6.6vw,7.6rem)] leading-[0.88] block mt-1">
+            <h1 className="hero-bekal-outline text-[clamp(3.1rem,6.6vw,7.6rem)] leading-[0.9] block mt-1 break-words">
               BEKAL
             </h1>
           </div>
@@ -55,11 +55,11 @@ export default function Hero() {
             A developer and problem solver working at the intersection of AI, computer vision and e-commerce. I build real-world solutions that create impact.
           </p>
 
-          {/* CTA Buttons in natural proximity directly below description */}
-          <div className="flex flex-wrap items-center gap-3 pt-3.5 border-t border-[#C9C7C0]">
+          {/* CTA Buttons: neat flex-col on very small screens, flex-row on sm+ */}
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-3 pt-3.5 border-t border-[#C9C7C0]">
             <a
               href="#work"
-              className="btn-premium-primary btn-premium-lime px-5 sm:px-6 py-2.5 sm:py-3 text-xs"
+              className="btn-premium-primary btn-premium-lime px-5 sm:px-6 py-3 sm:py-3 text-xs w-full sm:w-auto text-center"
             >
               <span>VIEW MY WORK</span>
               <ArrowUpRight className="w-3.5 h-3.5 arrow-glide" />
@@ -69,7 +69,7 @@ export default function Hero() {
               href="/resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-premium-outline px-5 sm:px-6 py-2.5 sm:py-3 text-xs"
+              className="btn-premium-outline px-5 sm:px-6 py-3 sm:py-3 text-xs w-full sm:w-auto text-center"
             >
               <span>DOWNLOAD RESUME</span>
               <ArrowDown className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-y-0.5" />
@@ -78,14 +78,14 @@ export default function Hero() {
         </div>
 
         {/* Middle Column (5 Cols on desktop): Prominent Enlarged Portrait + Annotation */}
-        <div className="lg:col-span-5 flex flex-col items-center justify-end relative pt-4 px-3 sm:px-6 overflow-hidden border-b lg:border-b-0 lg:border-r border-[#C9C7C0] bg-[#F5F3EE] h-full">
+        <div className="lg:col-span-5 flex flex-col items-center justify-end relative pt-4 px-3 sm:px-6 overflow-hidden border-b lg:border-b-0 lg:border-r border-[#C9C7C0] bg-[#F5F3EE] h-full min-h-[340px] sm:min-h-[440px] lg:min-h-0">
           {/* Handwritten Annotation Note */}
           <div className="absolute top-4 sm:top-5 left-4 sm:left-6 z-10 select-none">
-            <span className="font-mono-tech text-[11px] sm:text-xs italic tracking-tighter text-[#111111] block leading-tight font-bold">
+            <span className="font-mono-tech text-[10px] sm:text-xs italic tracking-tighter text-[#111111] block leading-tight font-bold">
               TURNING<br />IDEAS<br />INTO REAL<br />SOLUTIONS.
             </span>
             <svg
-              className="w-5 h-5 mt-0.5 text-[#111111]"
+              className="w-4 h-4 sm:w-5 sm:h-5 mt-0.5 text-[#111111]"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
@@ -96,7 +96,7 @@ export default function Hero() {
           </div>
 
           {/* Sumanth Black-and-White Portrait: Enlarged 30%+, Anchored to bottom edge with subtle hover depth */}
-          <div className="relative w-full max-w-[490px] h-[380px] sm:h-[460px] md:h-[520px] lg:h-full lg:max-h-[calc(100svh-76px)] flex items-end justify-center select-none group">
+          <div className="relative w-full max-w-[490px] h-[360px] sm:h-[460px] md:h-[520px] lg:h-full lg:max-h-[calc(100svh-76px)] flex items-end justify-center select-none group">
             <Image
               src="/images/sumanth-hero.png"
               alt="Sumanth Bekal — black-and-white profile portrait"

@@ -112,10 +112,10 @@ export default function ContactFooter() {
                   DIRECT CONTACT CHANNELS
                 </div>
                 
-                <div className="flex flex-col sm:flex-row gap-3">
+                <div className="flex flex-col sm:flex-row gap-2.5 sm:gap-3">
                   <a
                     href="tel:+917338211884"
-                    className="btn-premium-primary btn-premium-outline-dark px-4 py-2.5 text-xs font-normal"
+                    className="btn-premium-primary btn-premium-outline-dark px-4 py-2.5 text-xs font-normal justify-center"
                   >
                     <Phone className="w-3.5 h-3.5 text-[#C7F000]" />
                     <span>+91 7338211884</span>
@@ -125,7 +125,7 @@ export default function ContactFooter() {
                     href="https://wa.me/917338211884"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="btn-premium-primary px-4 py-2.5 text-xs font-normal bg-[#1a1a1a] border border-[#333333] hover:border-[#25D366] hover:text-[#25D366]"
+                    className="btn-premium-primary px-4 py-2.5 text-xs font-normal bg-[#1a1a1a] border border-[#333333] hover:border-[#25D366] hover:text-[#25D366] justify-center"
                   >
                     <MessageSquare className="w-3.5 h-3.5 text-[#25D366]" />
                     <span>WhatsApp: +91 7338211884</span>
@@ -134,10 +134,10 @@ export default function ContactFooter() {
               </div>
 
               {/* Action Buttons matching reference */}
-              <div className="flex flex-wrap items-center gap-4 mb-8">
+              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 mb-8">
                 <a
                   href="mailto:Sumanthbekal505@gmail.com"
-                  className="btn-premium-primary btn-premium-lime px-6 sm:px-8 py-3.5 text-xs"
+                  className="btn-premium-primary btn-premium-lime px-6 sm:px-8 py-3.5 text-xs text-center justify-center"
                 >
                   <span>DIRECT EMAIL</span>
                   <ArrowUpRight className="w-4 h-4 arrow-glide" />
@@ -147,7 +147,7 @@ export default function ContactFooter() {
                   href="/resume.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-premium-outline-dark px-6 sm:px-8 py-3.5 text-xs inline-flex items-center gap-3 border font-mono-tech font-bold uppercase tracking-wider transition-all duration-300 hover:border-[#C7F000] hover:text-[#C7F000]"
+                  className="btn-premium-outline-dark px-6 sm:px-8 py-3.5 text-xs inline-flex items-center justify-center gap-3 border font-mono-tech font-bold uppercase tracking-wider transition-all duration-300 hover:border-[#C7F000] hover:text-[#C7F000] text-center"
                 >
                   <span>VIEW RESUME</span>
                   <Lock className="w-3.5 h-3.5" />

@@ -376,7 +376,7 @@ function ProjectCard({
           ? "transform 0.15s ease-out, box-shadow 0.3s ease"
           : "transform 0.45s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.45s cubic-bezier(0.22, 1, 0.36, 1)",
       }}
-      className="relative flex flex-col border-b lg:border-b-0 lg:border-r border-[#C9C7C0] last:border-r-0 bg-[#F5F3EE] p-5 sm:p-6 transition-all duration-300 hover:bg-white group min-w-[280px] overflow-hidden"
+      className="relative flex flex-col border-b lg:border-b-0 lg:border-r border-[#C9C7C0] last:border-r-0 bg-[#F5F3EE] p-5 sm:p-6 transition-all duration-300 hover:bg-white group w-full max-w-full overflow-hidden"
     >
       {/* Dynamic Local Spotlight for Project Card */}
       <div
@@ -552,10 +552,10 @@ export default function FeaturedProjects() {
           </div>
         </div>
 
-        {/* 5 Cards Row (scrollable on all breakpoints) */}
+        {/* 5 Cards Row (touch scrollable with responsive card widths) */}
         <div
           ref={scrollRef}
-          className="grid grid-flow-col auto-cols-[minmax(280px,340px)] lg:auto-cols-[minmax(280px,1fr)] overflow-x-auto no-scrollbar scroll-smooth"
+          className="grid grid-flow-col auto-cols-[minmax(270px,85vw)] sm:auto-cols-[320px] lg:auto-cols-[minmax(280px,1fr)] overflow-x-auto no-scrollbar scroll-smooth max-w-full"
         >
           {PROJECTS_DATA.map((project) => (
             <ProjectCard

@@ -67,7 +67,7 @@ function InteractiveClientCard({ client }: { client: ClientShowcaseItem }) {
           ? "transform 0.15s ease-out, box-shadow 0.3s ease"
           : "transform 0.45s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.45s cubic-bezier(0.22, 1, 0.36, 1)",
       }}
-      className="client-card relative flex-none w-[82vw] sm:w-[48vw] md:w-[36vw] lg:w-[24vw] xl:w-[20%] p-6 sm:p-7 bg-[#111111] transition-all duration-300 flex flex-col justify-between group select-none overflow-hidden outline-none focus-visible:ring-1 focus-visible:ring-[#C7F000]"
+      className="client-card relative flex-none w-[80vw] sm:w-[48vw] md:w-[36vw] lg:w-[24vw] xl:w-[20%] max-w-[340px] p-6 sm:p-7 bg-[#111111] transition-all duration-300 flex flex-col justify-between group select-none overflow-hidden outline-none focus-visible:ring-1 focus-visible:ring-[#C7F000]"
     >
       {/* 1. Dynamic Cursor Spotlight (Warm Champagne / Gold Radial Glow) */}
       <div
@@ -266,7 +266,7 @@ export default function ClientWebsites() {
             if (e.key === "ArrowLeft") scroll("left");
             if (e.key === "ArrowRight") scroll("right");
           }}
-          className="flex overflow-x-auto divide-x divide-[#262626] no-scrollbar scroll-smooth outline-none focus-visible:ring-1 focus-visible:ring-[#C7F000]"
+          className="flex overflow-x-auto divide-x divide-[#262626] no-scrollbar scroll-smooth outline-none focus-visible:ring-1 focus-visible:ring-[#C7F000] max-w-full"
         >
           {CLIENT_SHOWCASE_DATA.map((client) => (
             <InteractiveClientCard key={client.id} client={client} />
