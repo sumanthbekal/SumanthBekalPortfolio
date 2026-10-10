@@ -36,7 +36,7 @@ export default function About() {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="text-[#B8B8B8] text-base sm:text-lg leading-relaxed max-w-3xl mx-auto"
         >
-          I'm a Computer Science (AI & ML) graduate and currently working as a Shopify Developer at
+          I&apos;m a Computer Science (AI & ML) graduate and currently working as a Shopify Developer at
           Klientship Technologies. Alongside Shopify development, I have built multiple AI and Computer
           Vision projects using YOLO, TensorFlow, Python, and Flask. I enjoy creating products that combine
           elegant user experiences with practical AI solutions.

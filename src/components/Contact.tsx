@@ -45,7 +45,7 @@ export default function Contact() {
           transition={{ duration: 0.5, delay: 0.1 }}
           className="text-3xl sm:text-5xl font-bold tracking-tight text-white mb-4"
         >
-          Let's Build Something <span className="text-gradient-gold">Amazing Together</span>
+          Let&apos;s Build Something <span className="text-gradient-gold">Amazing Together</span>
         </motion.h2>
 
         <motion.p
@@ -55,7 +55,7 @@ export default function Contact() {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="text-[#B8B8B8] text-base sm:text-lg leading-relaxed"
         >
-          I'm always open to discussing Shopify development, AI projects, computer vision applications,
+          I&apos;m always open to discussing Shopify development, AI projects, computer vision applications,
           freelance opportunities, and innovative collaborations. Feel free to connect with me.
         </motion.p>
       </div>

@@ -17,7 +17,7 @@ const CLIENT_PROJECTS = [
       "Developed a premium Shopify storefront for Luv2Eat, a ready-to-cook food brand offering authentic regional Indian meal kits and premixes. Built a fast, mobile-first shopping experience with a modern UI focused on product discovery and seamless purchasing.",
   },
   {
-    name: "Karigar's Knot",
+    name: "Karigar&apos;s Knot",
     category: "Handcrafted Luxury Footwear",
     logo: "/clients/karigarsknot.png",
     url: "https://www.karigarsknot.com/",
@@ -183,7 +183,7 @@ export default function ClientProjects() {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="text-[#B8B8B8] text-base sm:text-lg leading-relaxed"
         >
-          Real businesses and brands I've designed and developed using Shopify, delivering premium eCommerce
+          Real businesses and brands I&apos;ve designed and developed using Shopify, delivering premium eCommerce
           experiences and production-ready storefronts.
         </motion.p>
       </div>
